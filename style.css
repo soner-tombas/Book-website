@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #1c2a39;
+  --gray: #5c6a79;
+  --purple: #4c3db2;
+  --transition:all 250ms ease-in-out;
+}
+
+
+.navbar {
+  height: 120px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.title {
+  color: black;
+  font-weight: bolder;
+}
+
+.menu,
+.menu-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  color: gray;
+  cursor: pointer;
+
+}
+
+.menu li,
+.menu-icons i {
+  margin: 0 10px;
+}
+
+.menu.active {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.menu-icons i {
+  color: var(--black)
+}
+
+.basket-icon {
+  position: relative;
+}
+
+.basket-count {
+  right: -0.7rem;
+  bottom: 0px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--black);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.slider {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+.slider img {
+  height: 600px;
+
+}
+
+.store {
+  width: 80%;
+  margin-left: 10%;
+  /* background-color: gainsboro; */
+  position: relative;
+  height: 100px;
+}
+
+
+.book-card {
+  height: 500px;
+}
+
+.fos {
+  font-family: "Open Sans", sans-serif;
+}
+
+.gray {
+  color: var(--gray);
+
+}
+
+.black {
+  color: var(--black);
+
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.book-star-rate,
+.bi-star,
+.bi-star-fill {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+.book-star-rate,
+.bi-star-fill {
+  color: #f2c94c;
+}
+
+.book-reviews {
+  color: grey;
+}
+
+.book-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-purple {
+  cursor: pointer;
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  font-size: 1 rem;
+  font-weight: bold;
+  background-color: transparent;
+  transition: var(--transition)
+}
+
+.btn-purple:hover {
+  background-color: purple;
+  color: #4c3db2;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #bdbdbd
+}
+
+.filitre-backgraund {
+  background-color: yellowgreen;
+  width: 400px;
+  height: 900px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.filitre {
+  list-style-type: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-height: 650px;
+  justify-content: center;
+
+
+}
+
+.filitre li {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+
+
+.filitre li:hover {
+  color: var(--purple)
+}
+
+.filitre li.active {
+  color: var(--purple);
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+.filitre li.active::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--purple);
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+
+}
+
+
+.basket-modal {
+  opacity: 0;
+  background-color: #5c6a7950;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: var(--transition);
+ 
+}
+.basket-modal.active{
+  opacity: 1;
+  z-index: 999;
+}
+
+.basket-itmes-a{
+  /* width: 450px; */
+  background-color: white;
+  height: 100%;
+  float:right;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+transition: var(--transition);
+
+}
+
+.basket-modal.active.bokset-itmes{
+ width: 450px ; 
+}
+
+.basket-itmes .bi-x {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 3rem;
+  color: var(--black);
+  cursor: pointer;
+
+}
+
+.basket-title {
+  color: #1c2a39;
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.basket-list {
+  list-style-type: none;
+  padding: 0 10px;
+  margin-top: 3rem;
+
+}
+
+.basket-list li {
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+
+
+
+.basket-items-info {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basket-itmes-info .book-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.basket-itmes-info .book-price {
+  font-size: 16px;
+
+}
+
+.basket-itmes-info .book-remove {
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--gray);
+
+}
+
+ .basket-items-info .book-count {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: bold;
+
+
+}
+
+.basket-items-info , .book-count.increase,
+.decrease {
+  cursor: pointer;
+  color: var(--purple);
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.total{
+  text-align: center;
+  justify-content: center;
+  font-size: medium;
+  font-weight: bold;
+float: inline-end;
+}
